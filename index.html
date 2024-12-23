@@ -263,9 +263,6 @@
                         <td class="visible-with-data" id="BD_Envolve">' + (feature.properties['BD_Envolve'] !== null ? autolinker.link(feature.properties['BD_Envolve'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['BD_PROJ_CO'] !== null ? autolinker.link(feature.properties['BD_PROJ_CO'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Grau de Risco</th>\
                         <td>' + (feature.properties['BD_RISK_US'] !== null ? autolinker.link(feature.properties['BD_RISK_US'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -294,7 +291,7 @@
             iconUrl: 'markers/Trees_Nelas_3.svg',
             iconSize: [10.639999999999999, 10.639999999999999]
         }),
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_Trees_Nelas_3');
@@ -302,7 +299,7 @@
         map.getPane('pane_Trees_Nelas_3').style['mix-blend-mode'] = 'normal';
         var layer_Trees_Nelas_3 = new L.geoJson(json_Trees_Nelas_3, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_Trees_Nelas_3',
             layerName: 'layer_Trees_Nelas_3',
             pane: 'pane_Trees_Nelas_3',
